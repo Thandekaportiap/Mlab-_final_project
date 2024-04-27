@@ -1,0 +1,149 @@
+* {
+    background-color: thistle;
+    padding: 2px;
+    margin: 6px;
+    box-sizing: border-box;
+}
+/* top navbar */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 200px;
+    color: black;
+}
+.navbar li a:hover,
+.navbar li a:active{
+    color: orangered;
+}
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    bottom: -55px;
+    left: 30px;
+    background: orangered;
+}
+.avatar {
+width: 30px;
+height: 35px;
+}
+/* main page */
+h5{
+    color: orangered;
+}
+
+h1{
+    font-weight: bolder;
+    font-size: xx-large;
+} 
+.img-block {
+    float: left;
+    cursor: pointer;
+}
+ .text{
+    float: right;
+    padding: 12px;
+    margin: 0 26px 0 26px;
+    font-weight: bolder;
+    text-align: left;
+ }
+
+ .main-img {
+    height: 400px;
+    width: 480px;
+    
+ }
+ .row {
+    display: flex;
+    width: 25px;
+    height: 20px;
+ }
+
+ .img {
+    flex: 2%;
+    border-radius: 4%;
+    padding: 2px;
+ }
+ .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  i {
+    font-size: 30px;
+  }
+
+  #minus{
+    align-content: left;
+    padding: 4px;
+    margin: 2px;
+  }
+#plus {
+    align-content: right;
+    padding: 4px;
+}
+
+  .btn {
+    width: 150px;
+    color: black;
+    background-color: gainsboro;
+    cursor: pointer;
+    border: none;
+  }
+
+  .cart-btn {
+    padding: 1px 5px;
+    border-radius: 12%;
+    border: 2px solid white;
+    background-color: rgba(218, 85, 8, 0.856);
+    color: wheat;
+    width: 280px;
+    font-size: x-large;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+
+  .hero .img-block .row:hover,
+  .hero .img-block .row::active{
+    color: orangered;
+  }
+
+  .hero .img-block .row::active::after,
+  .hero .img-block .row:hover::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    left: 30px;
+    background: orangered;
+  }
+  img {
+    border-radius: 2%;
+  }
+
+  img:hover {
+    opacity: 0.5;
+    
+  }
