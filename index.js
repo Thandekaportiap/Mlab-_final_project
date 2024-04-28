@@ -17,3 +17,8 @@ var text = `<h5>Sneaker Company</h5>
     hoverLink.addEventListener('mouseover', () =>{
         alert("Your cart is empty");
     }), 3000;
+
+
+
+
+
