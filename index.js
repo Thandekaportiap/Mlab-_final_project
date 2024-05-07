@@ -19,6 +19,13 @@ var text = `<h5>Sneaker Company</h5>
     }), 3000;
 
 
+const myFunction = (smallImg) => {
+    var fullImg = document.getElementById("main-img");
+    fullImg.src = smallImg.scr;
+};
+
+
+
 
 
 
