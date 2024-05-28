@@ -1,0 +1,30 @@
+* {
+    background-color: orangered;
+    text-align: left;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: antiquewhite;
+
+  }
+  
+  label, input {
+    display: block;
+    margin-bottom: 26px;
+  }
+  
+  input[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid blue;
+    cursor: pointer;
+  }
+   a {
+    text-decoration: none;
+   }
