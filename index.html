@@ -6,43 +6,45 @@
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
-    <title>Ecoomerce-product-page</title>
+    <title>Ecommerce Product Page</title>
 </head>
 <body>
-    <div class="header">
-        <a href=""><i><span><img src="images/logo.svg"></span></i></a>
-    <div >
-        <ul class="navbar">
-            <li><a  href="">Collections</a></li>
-            <li><a href="">Mens</a></li>
-            <li><a class="active" href="">Women</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="#"><img class="cart" src="images/icon-cart.svg" alt=""></a></li>
-            <li><a href="login.html"><img class="avatar" src="images/image-avatar.png"></a></li>
-        </ul>
+    <div class="container">
+        <header>
+            <img src="/images/logo.svg" alt="Sneakers Logo" class="logo">
+            <nav>
+                <a href="#" class="active">Collections</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+            <hr>
+            <div class="header-icons">
+                <img src="/images/icon-cart.svg" alt="Cart">
+                <img src="/images/image-avatar.png" alt="User Profile">
+            </div>
+        </header>
+        <main>
+            <div class="left-column">
+                <img src="/images/image-product-1.jpg" alt="Fall Limited Edition Sneakers" class="main-image" id="main-img">
+                <div class="thumbnail-images">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" onclick="myFunction(this)">
+                    <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" onclick="myFunction(this)">
+                    <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" onclick="myFunction(this)">
+                    <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 3" onclick="myFunction(this)">
+                    <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" onclick="myFunction(this)">
+                </div>
+            </div>
+            <div class="right-column">
+                <div class="text" id="text-block"></div>
+            </div>
+        </main>
     </div>
-    </div>
-    <hr>
-    <section class="hero" >
-        <div class="img-block">
-<img class="main-img" id="main-img" src="images/image-product-1.jpg">
-<div class="row" id="cart">
-<p class="img"><img src="images/image-product-1.jpg" alt="" width="95px" height="75px" onclick="myFunction(this)"></p>
-<p class="img"><img src="images/image-product-2.jpg" alt="" width="95px" height="75px" onclick="myFunction(this)"></p>
-<p class="img"><img src="images/image-product-3.jpg" alt="" width="95px" height="75px" onclick="myFunction(this)"></p>
-<p class="img"><img src="images/image-product-4.jpg" alt="" width="95px" height="75px" onclick="myFunction(this)"></p>
-
-<a id="prev" onclick="prevSlide()">&#10094;</a>
-  <a id="next" onclick="nextSlide()">&#10095;</a>
-</div>
-        </div>
-        <div class="text" id="text-block">
-        </div>
-    </section>
+    
     <script src="index.js"></script>
     <footer>
-    <!-- <h3>Created By Thandeka Portia P Mazibuko</h3> -->
+        <!-- <h3>Created By Thandeka Portia P Mazibuko</h3> -->
     </footer>
 </body>
 </html>

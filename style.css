@@ -1,173 +1,219 @@
 * {
-    background-color: thistle;
-    padding: 2px;
-    margin: 6px;
-    box-sizing: border-box;
-}
-/* top navbar */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 20px;
+  background-color: thistle;
+  box-sizing: border-box;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  font-family: Arial, sans-serif;
 }
 
-.navbar li{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-.navbar li a{
-    text-decoration: none;
-    font-size: large;
-    font-weight: 200px;
-    color: black;
-}
-.navbar li a:hover,
-.navbar li a:active{
-    color: orangered;
-}
-.navbar li a.active::after,
-.navbar li a:hover::after {
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 3px;
-    bottom: -55px;
-    left: 30px;
-    background: orangered;
-}
-.avatar {
-width: 30px;
-height: 35px;
-}
-/* main page */
-h5{
-    color: orangered;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1{
-    font-weight: bolder;
-    font-size: xx-large;
-} 
-.img-block {
-    float: left;
-    cursor: pointer;
-}
- .text{
-    float: right;
-    padding: 12px;
-    margin: 0 26px 0 26px;
-    font-weight: bolder;
-    text-align: left;
- }
-
- .main-img {
-    height: 400px;
-    width: 480px;
-    
- }
- .row {
-    display: flex;
-    width: 25px;
-    height: 20px;
- }
-
- .img {
-    flex: 2%;
-    border-radius: 4%;
-    padding: 2px;
- }
- .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  i {
-    font-size: 30px;
-  }
-
-  #minus{
-    align-content: left;
-    padding: 4px;
-    margin: 2px;
-  }
-#plus {
-    align-content: right;
-    padding: 4px;
+nav a {
+  margin: 0 15px;
+  color: black;
+  text-decoration: none;
+  position: relative;
 }
 
-  .btn {
-    width: 150px;
-    color: black;
-    background-color: gainsboro;
-    cursor: pointer;
-    border: none;
+nav a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: orangered;
+  transition: width 0.3s ease;
+  width: 100%; /* Full underline */
+}
+
+.header-icons img {
+  margin-left: 20px;
+  width: 24px;
+}
+
+main {
+  display: flex;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.left-column {
+  flex: 1;
+  min-width: 300px; /* Ensure a minimum width */
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail-images img {
+  width: 80px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.right-column {
+  flex: 1;
+  margin-left: 40px;
+  min-width: 300px; /* Ensure a minimum width */
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.current-price {
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+}
+
+.discount {
+  background-color: orange;
+  color: white;
+  margin: 0 10px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.original-price {
+  color: grey;
+  text-decoration: line-through;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.quantity-selector button {
+  background-color: lightgrey;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.add-to-cart {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn {
+  width: 150px;
+  color: #333;
+  background-color: #e0e0e0;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d5d5d5;
+  color: #222;
+}
+
+.cart-btn {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #da5508, #f39231);
+  color: #fff;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 280px; /* Limit the max width */
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cart-btn:hover {
+  background: linear-gradient(135deg, #f39231, #da5508);
+  transform: translateY(-2px);
+}
+
+.btn .fa,
+.cart-btn .fa {
+  background-color: transparent; /* Ensure the icon background is transparent */
+  color: #000; /* Set the color of the icons (adjust as needed) */
+  padding: 0; /* Remove padding if necessary */
+  margin-right: 5px; /* Space between icon and text */
+}
+
+h5 {
+  color: orangered;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Stack header elements vertically */
+    align-items: flex-start; /* Align to the start */
   }
 
-  .cart-btn {
-    padding: 1px 5px;
-    border-radius: 12%;
-    border: 2px solid white;
-    background-color: rgba(218, 85, 8, 0.856);
-    color: wheat;
-    width: 280px;
-    font-size: x-large;
-    align-items: flex-start;
-    cursor: pointer;
+  main {
+    flex-direction: column; /* Stack columns on smaller screens */
+    margin-top: 20px; /* Reduce margin */
   }
 
-  .hero .img-block .row:hover,
-  .hero .img-block .row::active{
-    color: orangered;
+  .right-column {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 20px; /* Add margin on top */
   }
 
-  .hero .img-block .row::active::after,
-  .hero .img-block .row:hover::after{
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 3px;
-    left: 30px;
-    background: orangered;
-  }
-  img {
-    border-radius: 2%;
+  h2 {
+    font-size: 28px; /* Adjust heading size */
   }
 
-  img:hover {
-    opacity: 0.5;
-    
+  .btn, .cart-btn {
+    width: 100%; /* Full width buttons on smaller screens */
   }
+}
+.main-image {
+  width: 100%;
+  max-width: 500px; /* Set a max width for larger screens */
+  border-radius: 8px;
+}
 
-  #prev, #next {
-    position: absolute;
-    top: 50%;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 16px;
-    color: white;
-    background-color: black;
-    opacity: 0.5;
-    cursor: pointer;
-  }
+.thumbnail-images {
+  display: flex; /* Align thumbnails in a row */
+  justify-content: start;
+  margin-top: 10px;
+}
 
-  #prev {
-    left: 0;
-  }
-  
-  #next {
-    right: 60%;
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-    
-  }
+.thumbnail-images img {
+  width: 80px; /* Thumbnail size */
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer; /* Change cursor to indicate clickable */
+}
